@@ -1,51 +1,77 @@
 CC = g++
 
-INCLUDES = -I src\headers\ -I includes\ 
+INCLUDES =  -I src/headers -I includes
 
-DYNLIBS = windowsDynamic\glew32.dll WindowsDynamic\glfw3.dll
+DYNLIBS = windowsDynamic/glew32.dll WindowsDynamic/glfw3.dll
 
-LIBPATHS = -L windowsLibs\
+LIBPATHS = -L windowsLibs
 
 STATLIBS = -lopengl32
 
 CFLAGS = -c 
 
-APPFLAGS = -std=gnu++11 -o OpenGL_Game.exe
+APPFLAGS = -std=gnu++11
 
+Entity.cpp = src/code/Entities/Entity.cpp
 
+Loader.cpp = src/code/Loading/Loader.cpp
+
+MainGameLoop.cpp = src/code/MainGame/MainGameLoop.cpp
+
+Matricies.cpp = src/code/Math/Matricies.cpp
+
+ModelParser.cpp = src/code/ParsingMech/ModelParser.cpp
+
+Renderer.cpp = src/code/RenderMech/Renderer.cpp
+
+AbstractShader.cpp = src/code/ShaderMech/AbstractShader.cpp
+
+EntityShader.cpp = src/code/ShaderMech/EntityShader.cpp
+
+RM = rm
+#asf
 ALL: OpenGL_Game
 
-OpenGL_Game: Entities Loading MainGame Math ParsingMech RenderMech
-	$(CC) Entities Loading MainGame Math ParsingMech RenderMech $(DYNLIBS) $(INCLUDES) $(LIBPATHS) $(STATLIBS) $(APPFLAGS)
+OpenGL_Game: Entities Loading MainGame Math ParsingMech RenderMech ShaderMech
+	$(CC) *.o $(DYNLIBS) $(LIBPATHS) $(STATLIBS) $(APPFLAGS) -o OpenGL_Game.exe
 
 Entities: Entity.o 
 
-Entity.o: Entity.cpp
-	$(CC) $(CFLAGS) Entity.cpp
+Entity.o: $(Entity.cpp)
+	$(CC) $(CFLAGS) $(INCLUDES) $(Entity.cpp) $(APPFLAGS)
 
 Loading: Loader.o
 
-Loader.o: Loader.cpp
-	$(CC) $(CFLAGS) Loader.cpp
+Loader.o: $(Loader.cpp)
+	$(CC) $(CFLAGS) $(INCLUDES) $(Loader.cpp) $(APPFLAGS)
 
-MainGame: MainGame.o
+MainGame: MainGameLoop.o
 
-MainGame.o: MainGame.cpp
-	$(CC) $(CFLAGS) MainGame.cpp
+MainGameLoop.o: $(MainGameLoop.cpp)
+	$(CC) $(CFLAGS) $(INCLUDES) $(MainGameLoop.cpp) $(APPFLAGS)
 
 Math: Matricies.o
 
-Matricies.o: Matricies.cpp
-	$(CC) $(CFLAGS) Matricies.cpp
+Matricies.o: $(Matricies.cpp)
+	$(CC) $(CFLAGS) $(INCLUDES) $(Matricies.cpp) $(APPFLAGS)
 
 ParsingMech: ModelParser.o
 
-ModelParser.o: ModelParser.cpp
-	$(CC) $(CFLAGS) ModelParser.cpp
+ModelParser.o: $(ModelParser.cpp)
+	$(CC) $(CFLAGS) $(INCLUDES) $(ModelParser.cpp) $(APPFLAGS)
 
 RenderMech: Renderer.o
 
-Renderer.o: Renderer.cpp
-	$(CC) $(CFLAGS) Renderer.cpp
+Renderer.o: $(Renderer.cpp)
+	$(CC) $(CFLAGS) $(INCLUDES) $(Renderer.cpp) $(APPFLAGS)
 
-Clean: rm  *.o OpenGL_Game
+ShaderMech: AbstractShader.o EntityShader.o
+
+AbstractShader.o: $(AbstractShader.cpp)
+	$(CC) $(CFLAGS) $(INCLUDES) $(AbstractShader.cpp) $(APPFLAGS)
+
+EntityShader.o: $(EntityShader.cpp)
+	$(CC) $(CFLAGS) $(INCLUDES) $(EntityShader.cpp) $(APPFLAGS)
+	
+clean: 
+	$(RM) *o OpenGL_Game.exe
