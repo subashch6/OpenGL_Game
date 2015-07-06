@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Entit",
+				"Entities"
+			],
+			[
 				"c",
 				"c"
 			]
@@ -11,41 +15,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "shaders/TestVert",
-			"settings":
-			{
-				"buffer_size": 147,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "CC = g++\n\nINCLUDES =  -I src/headers -I includes\n\nDYNLIBS = windowsDynamic/glew32.dll WindowsDynamic/glfw3.dll\n\nLIBPATHS = -L windowsLibs\n\nSTATLIBS = -lopengl32\n\nCFLAGS = -c \n\nAPPFLAGS = -std=gnu++11\n\nEntity.cpp = src/code/Entities/Entity.cpp \n\nLoader.cpp = src/code/Loading/Loader.cpp \n\nMainGameLoop.cpp = src/code/MainGame/MainGameLoop.cpp\n\nMatricies.cpp = src/code/Math/Matricies.cpp\n\nModelParser.cpp = src/code/ParsingMech/ModelParser.cpp\n\nRenderer.cpp = src/code/RenderMech/Renderer.cpp\n\nAbstractShader.cpp = src/code/ShaderMech/AbstractShader.cpp\n\nEntityShader.cpp = src/code/ShaderMech/EntityShader.cpp\n\nRM = rm\n\nFILES = $(shell find src/code  -regex \".*/*.cpp\")\nCPPFILES =  $(wildcard src/code/MainGame/*.cpp)\n\ncfiles = *.c\n\nDirectories = $(wildcard src/code/*/*.cpp)\nfiles = $(wildcard $(Directories/*))\n\n\n%.o: test.c\n	$(CC) $(CFLAGS) $(INCLUDES) $(Directories) $(APPFLAGS) -o $@QHD\n\nALL: OpenGL_Game\n\nOpenGL_Game: OpenGL_Game.exe\n	$(CC) *.o $(DYNLIBS) $(LIBPATHS) $(STATLIBS) $(APPFLAGS) -o OpenGL_Game.exe\n\nOpenGL_Game.exe: $(CPPFILES)\n	$(CC) $(CFLAGS) $(INCLUDES) $(FILES) $(APPFLAGS)\n	\nclean: \n	$(RM) *o OpenGL_Game.exe\n",
-			"file": "Makefile",
-			"file_size": 1184,
-			"file_write_time": 130801522376973752,
-			"settings":
-			{
-				"buffer_size": 1133,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/code/Entities/Entity.cpp",
-			"settings":
-			{
-				"buffer_size": 519,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "shaders/TestFrag",
-			"settings":
-			{
-				"buffer_size": 77,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -87,8 +56,12 @@
 	],
 	"file_history":
 	[
-		"/C/Users/subash/Desktop/glfw3dll.lib",
+		"/C/ComputerScience/OpenGL_Game/shaders/TestFrag",
+		"/C/ComputerScience/OpenGL_Game/src/code/Entities/Entity.cpp",
+		"/C/ComputerScience/OpenGL_Game/shaders/TestVert",
+		"/C/ComputerScience/OpenGL_Game/Makefile",
 		"/C/ComputerScience/OpenGL_Game/windowsMake/Makefile",
+		"/C/Users/subash/Desktop/glfw3dll.lib",
 		"/home/subash/Desktop/OpenGL_Game/shaders/TestVert",
 		"/home/subash/Desktop/OpenGL_Game/src/code/MainGame/MainGame.cpp",
 		"/C/ComputerScience/OpenGL_Game/src/code/MainGame/MainGame.cpp",
@@ -113,6 +86,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$@\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -130,122 +104,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "shaders/TestVert",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 147,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								146,
-								147
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Makefile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1133,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								891,
-								891
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 96.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/code/Entities/Entity.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 519,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								376,
-								376
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "shaders/TestFrag",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 77,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
 			]
 		}
 	],
