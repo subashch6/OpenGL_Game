@@ -75,3 +75,4 @@ EntityShader.o: $(EntityShader.cpp)
 	
 clean: 
 	$(RM) *o OpenGL_Game
+
