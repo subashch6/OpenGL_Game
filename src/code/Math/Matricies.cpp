@@ -12,11 +12,11 @@ glm::mat4x4 Matricies::transformationMatrix(glm::vec3 pos, float rx, float ry, f
 	return mat;
 }
 
-glm::mat4x4 Matricies::viewMatrix()
+glm::mat4x4 Matricies::viewMatrix(glm::vec3 eye, glm::vec3 lookVec, glm::vec3 up)
 {
-	return  glm::mat4x4(1.0);//glm::lookAt();
+	return  glm::lookAt(eye, lookVec, up);
 }
-glm::mat4x4 Matricies::projectionMatrix()
+glm::mat4x4 Matricies::projectionMatrix(float FOV, float aspect, float near, float far)
 {
-	return glm::mat4x4(1.0);
+	return glm::perspective(FOV, aspect, near, far);
 }

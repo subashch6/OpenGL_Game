@@ -107,7 +107,6 @@ int main()
 	//GLint moveLocation = glGetUniformLocation(shader.getProgram(), "move");
 	Renderer renderer;
     /* Loop until the user closes the window */
-   		fprintf(stdout, "MEOW");
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */

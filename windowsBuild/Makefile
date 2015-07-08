@@ -14,7 +14,7 @@ APPFLAGS = -std=gnu++11
 
 RM = rm
 
-VPATH = ../src/code/Entities:../src/code/Loading:../src/code/MainGame:../src/code/Math:../src/code/ParsingMech:../src/code/RenderMech:../src/code/ShaderMech
+VPATH = ../src/code/Entities:../src/code/Loading:../src/code/MainGame:../src/code/Math:../src/code/ParsingMech:../src/code/RenderMech:../src/code/ShaderMech:../src/code/Camera
 
 DIRECTORIES = $(wildcard ../src/code/*/*.cpp)
 
