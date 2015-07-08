@@ -54,7 +54,7 @@ int main()
 
 	int length = sizeof(positions) / sizeof(positions[0]);
 	int length2 = sizeof(positions2) / sizeof(positions2[0]);
-	std::ifstream stream("shaders/TestVert", std::ios::in);
+	std::ifstream stream("../shaders/TestVert", std::ios::in);
 	if (stream.is_open())
 	{
 		std::string line;
@@ -67,10 +67,9 @@ int main()
 	{
 		fprintf(stdout, "hello");
 		std::cout << "ello" << std::endl;
-		fprintf(stdout, "MEOW");
 	}
 	fprintf(stdout, "Hello \n");
-	ModelParser parser("res/test.obj");
+	ModelParser parser("../res/test.obj");
 	std::vector<glm::vec3> *vecs = parser.getVertices();
 	glm::vec3 *arrayVecs = vecs->data();
 
@@ -100,7 +99,7 @@ int main()
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
 	glDisableVertexAttribArray(0);*/
-	EntityShader shader("shaders/TestVert", "shaders/TestFrag");
+	EntityShader shader("../shaders/TestVert", "../shaders/TestFrag");
 	//GLuint program = loadShader("shaders/TestVert", "shaders/TestFrag");
 	//GLuint program = loadShader("shaders\\TestVert", "shaders\\TestFrag");
 	//glClearColor(0.0f,0.0f,1.0f,1.0f);
@@ -108,7 +107,6 @@ int main()
 	//GLint moveLocation = glGetUniformLocation(shader.getProgram(), "move");
 	Renderer renderer;
     /* Loop until the user closes the window */
-   
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */

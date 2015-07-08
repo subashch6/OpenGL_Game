@@ -11,11 +11,11 @@ Entity::Entity(glm::vec3 positionVector, float rotationx, float rotationy, float
 
 Entity::~Entity()
 {
-
+	
 }
 
-glm::vec3 Entity::getPosition()
-{
+glm::vec3 Entity::getPosition() 
+{  
 	return position;
 }
 
