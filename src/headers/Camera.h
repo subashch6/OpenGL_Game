@@ -3,7 +3,7 @@
 
 #include <glm/mat4x4.hpp>
 #include <glm/vec3.hpp>
-
+#include "GLFW/glfw3.h"
 
 class Camera
 {
@@ -11,11 +11,14 @@ public:
 	glm::vec3 *pos;
 	glm::vec3 *lookAt;
 	glm::vec3 *up;
-	float FOV = 60.0f;
+	float FOV = 45.0f;
 	float aspect = 4.0f/3.0f;
 	float near = 0.1f;
 	float far = 100.0f;
-	Camera(glm::vec3, glm::vec3, glm::vec3);
+	GLFWwindow * window;
+	Camera(glm::vec3, glm::vec3, glm::vec3, GLFWwindow*);
+	void checkChanges();
+	void camChanges(bool,bool,bool,bool,bool,bool);
 };
 
 #endif

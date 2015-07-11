@@ -99,7 +99,14 @@ int main()
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
 	glDisableVertexAttribArray(0);*/
+	Camera camera(glm::vec3(0,0,3), glm::vec3(0,0,0), glm::vec3(0,1,0), window);
+
 	EntityShader shader("../shaders/TestVert", "../shaders/TestFrag");
+	//shader.loadTransformationMatrix(Matricies::transformationMatrix(glm::vec3(0,0,-1),0,0,0,glm::vec3(1,1,1)));
+	//shader.loadProjectionMatrix(Matricies::projectionMatrix(camera.FOV,camera.aspect,camera.near,camera.far));
+	shader.loadProjectionMatrix( glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f));
+	shader.loadTransformationMatrix(glm::mat4(1.0f));
+	shader.loadViewMatrix(glm::lookAt(glm::vec3(4,3,3), glm::vec3(0,0,0),glm::vec3(0,1,0)));
 	//GLuint program = loadShader("shaders/TestVert", "shaders/TestFrag");
 	//GLuint program = loadShader("shaders\\TestVert", "shaders\\TestFrag");
 	//glClearColor(0.0f,0.0f,1.0f,1.0f);
@@ -114,6 +121,7 @@ int main()
         shader.loadMove(i);
 		i += (GLfloat).0001;
 		//glUniform1f(moveLocation, i);
+		//shader.loadViewMatrix(Matricies::viewMatrix(*camera.pos,*camera.lookAt,*camera.up));
 		renderer.render(shader.getProgram(), load.getVaoId(), load.getNumElements());
 		//renderer.render(program, load2.getVaoId(), load2.getNumElements());
 		/*
