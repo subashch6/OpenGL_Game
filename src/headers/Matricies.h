@@ -9,9 +9,9 @@
 class Matricies
 {
 public:
-	static glm::mat4x4 transformationMatrix(glm::vec3 , float , float , float , glm::vec3 );
-	static glm::mat4x4 viewMatrix(glm::vec3, glm::vec3, glm::vec3);
-	static glm::mat4x4 projectionMatrix(float, float, float, float);
+	static glm::mat4 transformationMatrix(glm::vec3 , float , float , float , glm::vec3 );
+	static glm::mat4 viewMatrix(glm::vec3, glm::vec3, glm::vec3);
+	static glm::mat4 projectionMatrix(float, float, float, float);
 private:
 };
 

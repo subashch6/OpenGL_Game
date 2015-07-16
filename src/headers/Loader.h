@@ -14,7 +14,6 @@ public:
 	Loader(glm::vec3 [], int);
 	~Loader();
 	void load();
-	void clean();
 	void add(glm::vec3 [], int );
 	void genBuffers();
 	GLuint getVaoId();

@@ -18,7 +18,7 @@ void Camera::checkChanges()
 	bool left;
 	int state;
 	state = glfwGetKey(window, GLFW_KEY_E);
-	if(state == GLFW_REPEAT)
+	if(state == GLFW_PRESS)
 	{
 		in = true;
 	}
@@ -54,7 +54,7 @@ void Camera::checkChanges()
 		down = false;
 	}
 	state = glfwGetKey(window, GLFW_KEY_D);
-	if(state == GLFW_REPEAT)
+	if(state == GLFW_PRESS)
 	{
 		right = true;
 	}
