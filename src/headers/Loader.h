@@ -3,21 +3,16 @@
 
 #include "GL/glew.h"
 #include "glm/vec3.hpp"
+#include "ModelParser.h"
+#include "Model.h"
 
 class Loader
 {
 private:
-	int numElements;
-	GLuint vaoID;
-	GLuint vbos[1];
 public:
-	Loader(glm::vec3 [], int);
+	Loader();
 	~Loader();
-	void load();
-	void add(glm::vec3 [], int );
-	void genBuffers();
-	GLuint getVaoId();
-	int getNumElements();
+	static Model* createModel(ModelParser*);
 };
 
 #endif 

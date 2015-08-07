@@ -11,7 +11,6 @@ class EntityShader: public AbstractShader
 {
 public:
 	EntityShader(const char*, const char*);
-	void startProgram();
 	void loadUniformLocations();
 	void loadViewMatrix(glm::mat4);
 	void loadProjectionMatrix(glm::mat4);

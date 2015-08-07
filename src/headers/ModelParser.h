@@ -18,9 +18,10 @@ class ModelParser
 public:
 	ModelParser(std::string );
 	~ModelParser();
-	std::vector<glm::vec3> *getVertices();
+	std::vector<glm::vec3> getVertices();
 private:
 	glm::vec3 splitString(std::string , std::string );
 };
 
-#endif 
+#endif  
+

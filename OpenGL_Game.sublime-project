@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "src\\code\\Models"
 		}
 	]
 }

@@ -2,10 +2,13 @@
 #define _RENDERER_H
 
 #include "GL/glew.h"
+#include <iostream>
 #include "Loader.h"
 #include "EntityShader.h"
 #include "Camera.h"
 #include "Matricies.h"
+#include <thread>
+#include <chrono>
 
 class Renderer
 {
@@ -13,8 +16,7 @@ class Renderer
 public:
 	Renderer(EntityShader*, Camera*);
 	~Renderer();
-	void render(Loader);
-	void coolDown();
+	void render(Model*);
 private:
 	EntityShader *shader;
 	Camera *camera;

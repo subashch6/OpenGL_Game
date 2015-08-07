@@ -18,9 +18,9 @@ ModelParser::ModelParser(std::string str)
 	}
 }
 
-std::vector<glm::vec3> * ModelParser::getVertices()
+std::vector<glm::vec3> ModelParser::getVertices()
 {
-	return &vertices;
+	return vertices;
 }
 
 glm::vec3 ModelParser::splitString(std::string str, std::string character)
@@ -46,7 +46,6 @@ glm::vec3 ModelParser::splitString(std::string str, std::string character)
 			std::stringstream ss(sf);
 			float sub;
 			ss >> sub;
-			//floats.push_back(std::stof(std::string(sf)));
 			floats.push_back(sub);
 			sf = strtok(NULL, character.c_str());
 		}
