@@ -12,12 +12,12 @@ AbstractShader::~AbstractShader()
 
 }
 
-GLuint AbstractShader::getProgram()
+GLint AbstractShader::getProgram()
 {
 	return program;
 }
 
-GLuint AbstractShader::loadShader(const char* vertShaderPath, const char* fragShaderPath)
+GLint AbstractShader::loadShader(const char* vertShaderPath, const char* fragShaderPath)
 {
 	GLuint vertShader = glCreateShader(GL_VERTEX_SHADER);
 	GLuint fragShader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -62,8 +62,17 @@ GLuint AbstractShader::loadShader(const char* vertShaderPath, const char* fragSh
 	GLuint program = glCreateProgram();
 	glAttachShader(program, vertShader);
 	glAttachShader(program, fragShader);
-
-	glLinkProgram(program);
+	
+	glLinkProgram(program);	
+  	glGetProgramiv(program,GL_LINK_STATUS,&params);
+  	if(params == GL_FALSE)
+  	{
+  		glGetProgramiv(program,GL_INFO_LOG_LENGTH,&infoLen);
+  		GLchar infoLog[infoLen];
+  		glGetProgramInfoLog(program, infoLen, &infoLen, infoLog);
+  		fprintf(stderr, "Program Linker issue:%s", infoLog);
+  		exit(EXIT_FAILURE);
+  	}
 
 	return program;
 
@@ -86,3 +95,12 @@ std::string AbstractShader::LoadFileToString(const char* filepath)
 	return fileData;
 }
 
+void AbstractShader::startProgram()
+{
+	glUseProgram(getProgram());
+}
+
+void AbstractShader::stopProgram()
+{
+	glUseProgram(0);
+}

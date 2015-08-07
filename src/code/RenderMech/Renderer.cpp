@@ -5,38 +5,34 @@ double Renderer::RED = 0.0, Renderer::GREEN = 0.0, Renderer::BLUE = 0.4, Rendere
 
 
 
-Renderer::Renderer()
+Renderer::Renderer(EntityShader *entityShader, Camera *loadCamera)
 {
+	shader = entityShader;
+	camera = loadCamera;
+}
+
+void Renderer::render(Model *model)
+{
+	glEnable(GL_DEPTH_TEST);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	
 	glClearColor((GLclampf)RED, (GLclampf)GREEN, (GLclampf)BLUE, (GLclampf)ALPHA);
-	glDisableVertexAttribArray(0);
-	glBindVertexArray(0);
-}
-
-void Renderer::readyUp(GLuint Program, GLuint Vao, int indexCount)
-{
-	//only use glClearColor(RED,GREEN,BLUE,ALPHA); if using one renderer for all rendering
-	indexes = indexCount;
-	program = Program;
-	vao = Vao;
-	glUseProgram(program);
-	glBindVertexArray(0);
-	glBindVertexArray(vao);
+	shader->startProgram();
+	shader->loadProjectionMatrix(Matricies::projectionMatrix(camera->FOV, camera->aspect, camera->near, camera->far));
+	shader->loadTransformationMatrix(Matricies::transformationMatrix(glm::vec3(0,0,0),0,0,0,glm::vec3(1,1,1)));
+	shader->loadViewMatrix(Matricies::viewMatrix(*(camera->pos), *(camera->lookAt),*(camera->up)));
+	glBindVertexArray(model->getVao());
 	glEnableVertexAttribArray(0);
-
-}
-
-void Renderer::render(GLuint Program, GLuint Vao, int indexCount)
-{
-	readyUp( Program,  Vao,  indexCount);
-	glDrawArrays(GL_TRIANGLES, 0, indexes);
-	coolDown();
-}
-
-void Renderer::coolDown()
-{
+	GLenum error = glGetError();
+	fprintf(stderr, "Error = %d\n",error);
+	glDrawArrays(GL_TRIANGLES, 0, model->getSize());
+	GLenum errors = glGetError();
+	fprintf(stderr, "Error = %d\n",errors);
 	glDisableVertexAttribArray(0);
 	glBindVertexArray(0);
+	shader->stopProgram();
+	camera->checkChanges();
 }
+
 Renderer::~Renderer()
 {
 

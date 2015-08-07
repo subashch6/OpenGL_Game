@@ -2,18 +2,24 @@
 #define _RENDERER_H
 
 #include "GL/glew.h"
-
+#include <iostream>
+#include "Loader.h"
+#include "EntityShader.h"
+#include "Camera.h"
+#include "Matricies.h"
+#include <thread>
+#include <chrono>
 
 class Renderer
 {
 	
 public:
-	Renderer();
+	Renderer(EntityShader*, Camera*);
 	~Renderer();
-	void readyUp(GLuint , GLuint , int );
-	void render(GLuint , GLuint , int );
-	void coolDown();
+	void render(Model*);
 private:
+	EntityShader *shader;
+	Camera *camera;
 	int indexes = 0;
 	GLuint program;
 	GLuint vao;

@@ -17,5 +17,6 @@
 #include "Matricies.h"
 #include "EntityShader.h"
 #include "Camera.h"
+#include "Model.h"
 
 #endif 

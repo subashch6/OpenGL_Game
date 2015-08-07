@@ -10,14 +10,15 @@
 class AbstractShader
 {
 public:
-	GLuint getProgram();
+	GLint getProgram();
 	AbstractShader(const char*, const char*);
 	~AbstractShader();
-
+	void startProgram();
+	void stopProgram();
 private:
-	GLuint program;
+	GLint program;
 	std::string LoadFileToString(const char*);
-	GLuint loadShader(const char*, const char*);
+	GLint loadShader(const char*, const char*);
 	virtual void loadUniformLocations() = 0;
 };
 

@@ -5,10 +5,9 @@ layout(location = 0) in vec3 in_pos;
 uniform mat4 viewMatrix;
 uniform mat4 projectionMatrix;
 uniform mat4 transformationMatrix;
-uniform float move;
 
 void main()
 {
-	vec4 modCoords = vec4(in_pos,1); 
-	gl_Position = projectionMatrix * viewMatrix * transformationMatrix * modCoords;
+	mat4 tvpMatrix = projectionMatrix * transformationMatrix * viewMatrix;
+	gl_Position = tvpMatrix * vec4(in_pos,1);
 }

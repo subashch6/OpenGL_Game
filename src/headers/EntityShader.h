@@ -11,13 +11,12 @@ class EntityShader: public AbstractShader
 {
 public:
 	EntityShader(const char*, const char*);
-	void loadMove(float);
 	void loadUniformLocations();
-	void loadViewMatrix(glm::mat4x4);
-	void loadProjectionMatrix(glm::mat4x4);
-	void loadTransformationMatrix(glm::mat4x4);
+	void loadViewMatrix(glm::mat4);
+	void loadProjectionMatrix(glm::mat4);
+	void loadTransformationMatrix(glm::mat4);
 private:
-	std::map<std::string,GLint> locations;
+	std::map<std::string,GLuint> locations;
 };
 
 
