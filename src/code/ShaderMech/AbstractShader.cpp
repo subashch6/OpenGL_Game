@@ -36,20 +36,26 @@ GLuint AbstractShader::loadShader(const char* vertShaderPath, const char* fragSh
 
 	GLint params;
 	GLsizei infoLen;
-	GLchar infoLog;
 
 	glGetShaderiv(vertShader, GL_COMPILE_STATUS, &params);
 	if(params == GL_FALSE)
 	{
-		glGetShaderInfoLog(vertShader, GL_INFO_LOG_LENGTH, &infoLen, &infoLog);
+		fprintf(stderr,"issue");
+		glGetShaderiv(vertShader,GL_INFO_LOG_LENGTH,&infoLen);
+		GLchar infoLog[infoLen];
+		glGetShaderInfoLog(vertShader, infoLen, &infoLen, infoLog);
 		fprintf(stderr, "vertShaderIssue: %s", infoLog);
+		glDeleteShader(vertShader);
 		exit(EXIT_FAILURE);
 	}
-	glGetShaderiv(fragShader, GL_COMPILE_STATUS, &params);
-	if (params == GL_FALSE)
+		glGetShaderiv(fragShader, GL_COMPILE_STATUS, &params);
+	if(params == GL_FALSE)
 	{
-		glGetShaderInfoLog(fragShader, GL_INFO_LOG_LENGTH, &infoLen, &infoLog);
+		glGetShaderiv(fragShader,GL_INFO_LOG_LENGTH,&infoLen);
+		GLchar infoLog[infoLen];
+		glGetShaderInfoLog(fragShader, infoLen, &infoLen, infoLog);
 		fprintf(stderr, "fragShaderIssue: %s", infoLog);
+		glDeleteShader(fragShader);
 		exit(EXIT_FAILURE);
 	}
 

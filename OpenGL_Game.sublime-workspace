@@ -8,10 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "linuxBuild/Makefile",
+			"file": "src/code/RenderMech/Renderer.cpp",
 			"settings":
 			{
-				"buffer_size": 779,
+				"buffer_size": 879,
 				"line_ending": "Unix"
 			}
 		}
@@ -52,6 +52,9 @@
 	],
 	"file_history":
 	[
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/OpenGL_Game.sublime-project",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/linuxBuild/Makefile",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/OpenGL_Game.sublime-workspace.orig",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/Makefile",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/windowsMake/Makefile",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/linuxMake/Makefile",
@@ -104,26 +107,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "linuxBuild/Makefile",
+					"file": "src/code/RenderMech/Renderer.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 779,
+						"buffer_size": 879,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								575,
-								575
+								567,
+								567
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 18.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},

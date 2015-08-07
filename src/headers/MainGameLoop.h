@@ -16,5 +16,6 @@
 #include "Renderer.h"
 #include "Matricies.h"
 #include "EntityShader.h"
+#include "Camera.h"
 
 #endif 
