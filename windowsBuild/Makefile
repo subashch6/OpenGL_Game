@@ -22,13 +22,15 @@ FILES = $(notdir $(DIRECTORIES))
 
 OFILES = $(patsubst %.cpp,%.o,$(FILES))
 
+DEBUGFLAGS = -g
+
 ALL: OpenGL_Game
 	
 OpenGL_Game: $(OFILES)
-	$(CC) $(OFILES) $(DYNLIBS) $(LIBPATHS) $(STATLIBS) $(APPFLAGS) -o OpenGL_Game.exe
+	$(CC) $(OFILES) $(DYNLIBS) $(LIBPATHS) $(STATLIBS) $(APPFLAGS) $(DEBUGFLAGS) -o OpenGL_Game.exe
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) $(INCLUDES) $< $(APPFLAGS) -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) $(DEBUGFLAGS) $< $(APPFLAGS) -o $@
 	
 clean: 
 	$(RM) $(OFILES) OpenGL_Game.exe

@@ -3,74 +3,16 @@
 	{
 		"selected_items":
 		[
-<<<<<<< HEAD
-=======
-			[
-				"v",
-				"vbos"
-			],
-			[
-				"load",
-				"loadCamera"
-			],
-			[
-				"glBind",
-				"glBindVertexArray"
-			],
-			[
-				"view",
-				"viewMatrix"
-			],
-			[
-				"vie",
-				"viewMatrix"
-			],
-			[
-				"info",
-				"infoLen"
-			],
-			[
-				"in",
-				"infoLog"
-			],
-			[
-				"gl",
-				"glUniform1f"
-			],
-			[
-				"vec",
-				"vec3"
-			],
-			[
-				"GLFW",
-				"GLFW_KEY_W"
-			],
-			[
-				"Entit",
-				"Entities"
-			],
-			[
-				"c",
-				"c"
-			]
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
 		]
 	},
 	"buffers":
 	[
 		{
-<<<<<<< HEAD
-			"file": "src/code/RenderMech/Renderer.cpp",
-			"settings":
-			{
-				"buffer_size": 879,
-				"line_ending": "Unix"
-=======
 			"file": "src/code/MainGame/MainGameLoop.cpp",
 			"settings":
 			{
 				"buffer_size": 1477,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -78,15 +20,15 @@
 			"settings":
 			{
 				"buffer_size": 455,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "src/code/RenderMech/Renderer.cpp",
 			"settings":
 			{
-				"buffer_size": 1180,
-				"line_ending": "Windows"
+				"buffer_size": 1083,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -94,15 +36,15 @@
 			"settings":
 			{
 				"buffer_size": 235,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "src/code/Loading/Loader.cpp",
 			"settings":
 			{
-				"buffer_size": 710,
-				"line_ending": "Windows"
+				"buffer_size": 650,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -110,7 +52,7 @@
 			"settings":
 			{
 				"buffer_size": 200,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -118,7 +60,7 @@
 			"settings":
 			{
 				"buffer_size": 227,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -126,7 +68,7 @@
 			"settings":
 			{
 				"buffer_size": 279,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -134,16 +76,7 @@
 			"settings":
 			{
 				"buffer_size": 75,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/code/ParsingMech/ModelParser.cpp",
-			"settings":
-			{
-				"buffer_size": 1005,
-				"line_ending": "Windows"
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -154,12 +87,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 400.0
+		"width": 0.0
 	},
 	"console":
 	{
@@ -179,81 +112,32 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
-		"/home/subash/Documents/ComputerScience/OpenGL_Game"
+		"/home/subash/Documents/ComputerScience/OpenGL_Game",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/linuxBuild",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/shaders",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/Loading",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/MainGame",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/Models",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/RenderMech",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/headers",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/windowsLib"
 	],
 	"file_history":
 	[
-		"/home/subash/Documents/ComputerScience/OpenGL_Game/OpenGL_Game.sublime-project",
+		"/usr/share/applications/defaults.list.old",
+		"/usr/share/applications/defaults.list",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/Entities/Entity.cpp",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/RenderMech/Renderer.cpp",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/linuxBuild/Makefile",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/OpenGL_Game.sublime-project",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/OpenGL_Game.sublime-workspace.orig",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/Makefile",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/windowsMake/Makefile",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/linuxMake/Makefile",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/linuxMake",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/shaders/TestFrag",
-=======
-		"/C/ComputerScience/OpenGL_Game",
-		"/C/ComputerScience/OpenGL_Game/linuxBuild",
-		"/C/ComputerScience/OpenGL_Game/res",
-		"/C/ComputerScience/OpenGL_Game/shaders",
-		"/C/ComputerScience/OpenGL_Game/src",
-		"/C/ComputerScience/OpenGL_Game/src/code",
-		"/C/ComputerScience/OpenGL_Game/src/code/Camera",
-		"/C/ComputerScience/OpenGL_Game/src/code/Entities",
-		"/C/ComputerScience/OpenGL_Game/src/code/Loading",
-		"/C/ComputerScience/OpenGL_Game/src/code/MainGame",
-		"/C/ComputerScience/OpenGL_Game/src/code/Math",
-		"/C/ComputerScience/OpenGL_Game/src/code/Models",
-		"/C/ComputerScience/OpenGL_Game/src/code/ParsingMech",
-		"/C/ComputerScience/OpenGL_Game/src/code/RenderMech",
-		"/C/ComputerScience/OpenGL_Game/src/code/ShaderMech",
-		"/C/ComputerScience/OpenGL_Game/src/headers",
-		"/C/ComputerScience/OpenGL_Game/windowsBuild",
-		"/C/ComputerScience/OpenGL_Game/src/code/Models"
-	],
-	"file_history":
-	[
-		"/C/ComputerScience/OpenGL_Game/src/code/Camera/Camera.cpp",
-		"/C/ComputerScience/OpenGL_Game/res/test.obj",
-		"/C/ComputerScience/OpenGL_Game/src/code/Loading/Loader.cpp",
-		"/C/ComputerScience/OpenGL_Game/src/code/ParsingMech/ModelParser.cpp",
-		"/C/ComputerScience/OpenGL_Game/shaders/TestVert",
-		"/C/ComputerScience/OpenGL_Game/shaders/TestFrag",
-		"/C/ComputerScience/OpenGL_Game/src/headers/Matricies.h",
-		"/C/ComputerScience/OpenGL_Game/src/headers/ModelParser.h",
-		"/C/ComputerScience/OpenGL_Game/windowsBuild/Makefile",
-		"/C/ComputerScience/OpenGL_Game/linuxBuild/Makefile",
-		"/C/ComputerScience/OpenGL_Game/src/headers/Model.h",
-		"/C/ComputerScience/OpenGL_Game/src/Models/Model.cpp",
-		"/C/ComputerScience/OpenGL_Game/src/headers/MainGameLoop.h",
-		"/C/ComputerScience/OpenGL_Game/src/headers/Loader.h",
-		"/C/ComputerScience/OpenGL_Game/src/code/ShaderMech/AbstractShader.cpp",
-		"/C/ComputerScience/OpenGL_Game/src/code/ShaderMech/EntityShader.cpp",
-		"/C/ComputerScience/OpenGL_Game/src/headers/AbstractShader.h",
-		"/C/ComputerScience/OpenGL_Game/src/code/MainGame/MainGameLoop.cpp",
-		"/C/ComputerScience/OpenGL_Game/src/code/Math/Matricies.cpp",
-		"/C/ComputerScience/OpenGL_Game/src/headers/Renderer.h",
-		"/C/ComputerScience/OpenGL_Game/src/headers/EntityShader.h",
-		"/C/Users/subash/Google Drive/Work/Summer/Photography 2014/1.2InfluentialPhotographersWorksheet.rtf",
-		"/C/Users/subash/Desktop/doc2asshole.doc",
-		"/C/Users/subash/Google Drive/Work/Summer/Photography 2014/UploadedFile_130519063462019188.doc",
-		"/C/Users/subash/Google Drive/Work/Summer/Photography 2014/5.1 - Photo Tagging Activity.rtf",
-		"/C/ComputerScience/JavaGame/.classpath",
-		"/C/ComputerScience/OpenGL_Game/src/headers/Camera.h",
-		"/C/ComputerScience/OpenGL_Game/OpenGL_Game.sublime-project",
-		"/C/ComputerScience/OpenGL_Game/src/code/Entities/Entity.cpp",
-		"/C/ComputerScience/OpenGL_Game/src/headers/Entity.h",
-		"/C/ComputerScience/OpenGL_Game/res/box.obj",
-		"/C/ComputerScience/OpenGL_Game/src/code/RenderMech/Renderer.cpp",
-		"/C/ComputerScience/OpenGL_Game/src/code/Tools/Math.cpp",
-		"/C/Users/subash/AppData/Roaming/Sublime Text 3/Packages/User/OpenGL_Game.sublime-build",
-		"/C/ComputerScience/OpenGL_Game/windowsMake/Makefile",
-		"/C/ComputerScience/OpenGL_Game/linuxMake/Makefile",
-		"/C/ComputerScience/OpenGL_Game/Makefile",
-		"/C/Users/subash/Desktop/glfw3dll.lib",
-		"/home/subash/Desktop/OpenGL_Game/shaders/TestVert",
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
 		"/home/subash/Desktop/OpenGL_Game/src/code/MainGame/MainGame.cpp",
 		"/home/subash/Desktop/OpenGL_Game/shaders/TestVert",
 		"/home/subash/Desktop/OpenGL_Game/shaders/TestFrag",
@@ -265,20 +149,13 @@
 	],
 	"find":
 	{
-<<<<<<< HEAD
 		"height": 35.0
-=======
-		"height": 34.0
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
-			"C:\\ComputerScience\\OpenGL_Game\\src",
-			"C:\\ComputerScience\\OpenGL_Game\\src\\code",
-			"C:\\ComputerScience\\OpenGL_Game"
 		]
 	},
 	"find_state":
@@ -286,36 +163,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-<<<<<<< HEAD
-=======
-			"glenableVertexattr",
-			"glattri",
-			"model",
-			"Model",
-			"Moddel",
-			"array",
-			"* ",
-			");\n",
-			"\"%\\",
-			"\");\n",
-			"Model",
-			" )",
-			"vertexattri",
-			"loadCamera",
-			"glEnable",
-			"\n		",
-			"		\n",
-			"load",
-			"gluseprogram",
-			"mat4.hpp",
-			"mat4x4.hpp",
-			"glm::mat4x4",
-			"tfloat",
-			";\n",
-			"infoLog",
-			"void",
+			"gedit",
 			"$@\n"
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -323,9 +172,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"mat4x4.hpp",
-			"mat4.hpp",
-			"glm::mat4"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -336,22 +182,11 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
-			"selected": 0,
-=======
 			"selected": 4,
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
 			"sheets":
 			[
 				{
 					"buffer": 0,
-<<<<<<< HEAD
-					"file": "src/code/RenderMech/Renderer.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 879,
-=======
 					"file": "src/code/MainGame/MainGameLoop.cpp",
 					"semi_transient": false,
 					"settings":
@@ -363,8 +198,8 @@
 						"selection":
 						[
 							[
-								1249,
-								1249
+								67,
+								67
 							]
 						],
 						"settings":
@@ -375,7 +210,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -391,8 +226,8 @@
 						"selection":
 						[
 							[
-								283,
-								283
+								226,
+								226
 							]
 						],
 						"settings":
@@ -413,15 +248,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1180,
+						"buffer_size": 1083,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1152,
-								1152
+								948,
+								948
 							]
 						],
 						"settings":
@@ -449,20 +284,19 @@
 						"selection":
 						[
 							[
-								196,
-								196
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -471,15 +305,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 710,
+						"buffer_size": 650,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								669,
-								669
+								627,
+								627
 							]
 						],
 						"settings":
@@ -507,8 +341,8 @@
 						"selection":
 						[
 							[
-								94,
-								94
+								0,
+								0
 							]
 						],
 						"settings":
@@ -519,7 +353,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -529,20 +363,14 @@
 					"settings":
 					{
 						"buffer_size": 227,
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
-								567,
-								567
-=======
-								143,
-								143
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
+								110,
+								110
 							]
 						],
 						"settings":
@@ -550,16 +378,10 @@
 							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-<<<<<<< HEAD
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-=======
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -575,8 +397,8 @@
 						"selection":
 						[
 							[
-								277,
-								277
+								279,
+								279
 							]
 						],
 						"settings":
@@ -587,7 +409,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -615,37 +437,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/code/ParsingMech/ModelParser.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1005,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								371,
-								371
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 8,
->>>>>>> 94ade4fb6ae81555643430d3fc098b5df657a628
 					"type": "text"
 				}
 			]
@@ -653,7 +445,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 21.0
 	},
 	"input":
 	{
@@ -690,7 +482,7 @@
 	"project": "OpenGL_Game.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":

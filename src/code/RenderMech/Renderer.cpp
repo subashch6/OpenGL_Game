@@ -22,11 +22,8 @@ void Renderer::render(Model *model)
 	shader->loadViewMatrix(Matricies::viewMatrix(*(camera->pos), *(camera->lookAt),*(camera->up)));
 	glBindVertexArray(model->getVao());
 	glEnableVertexAttribArray(0);
-	GLenum error = glGetError();
-	fprintf(stderr, "Error = %d\n",error);
+	std::cout << model->getSize() << std::endl;
 	glDrawArrays(GL_TRIANGLES, 0, model->getSize());
-	GLenum errors = glGetError();
-	fprintf(stderr, "Error = %d\n",errors);
 	glDisableVertexAttribArray(0);
 	glBindVertexArray(0);
 	shader->stopProgram();
