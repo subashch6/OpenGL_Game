@@ -27,7 +27,7 @@ void Camera::checkChanges()
 		in = false;
 	}
 	state = glfwGetKey(window, GLFW_KEY_Q);
-	if(state == GLFW_REPEAT)
+	if(state == GLFW_PRESS)
 	{
 		out = true;
 	}
@@ -36,7 +36,7 @@ void Camera::checkChanges()
 		out = false;
 	}
 	state = glfwGetKey(window, GLFW_KEY_W);
-	if(state == GLFW_REPEAT)
+	if(state == GLFW_PRESS)
 	{
 		up = true;
 	}
@@ -45,7 +45,7 @@ void Camera::checkChanges()
 		up = false;
 	}
 	state = glfwGetKey(window, GLFW_KEY_S);
-	if(state == GLFW_REPEAT)
+	if(state == GLFW_PRESS)
 	{
 		down = true;
 	}
@@ -63,7 +63,7 @@ void Camera::checkChanges()
 		right = false;
 	}
 	state = glfwGetKey(window, GLFW_KEY_A);
-	if(state == GLFW_REPEAT)
+	if(state == GLFW_PRESS)
 	{
 		left = true;
 	}

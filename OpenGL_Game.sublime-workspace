@@ -122,15 +122,17 @@
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/Models",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/RenderMech",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/headers",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/windowsBuild",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/windowsLib"
 	],
 	"file_history":
 	[
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/windowsBuild/Makefile",
+		"/home/subash/Documents/ComputerScience/OpenGL_Game/linuxBuild/Makefile",
 		"/usr/share/applications/defaults.list.old",
 		"/usr/share/applications/defaults.list",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/Entities/Entity.cpp",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/src/code/RenderMech/Renderer.cpp",
-		"/home/subash/Documents/ComputerScience/OpenGL_Game/linuxBuild/Makefile",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/OpenGL_Game.sublime-project",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/OpenGL_Game.sublime-workspace.orig",
 		"/home/subash/Documents/ComputerScience/OpenGL_Game/Makefile",
@@ -149,7 +151,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -312,8 +314,8 @@
 						"selection":
 						[
 							[
-								627,
-								627
+								650,
+								650
 							]
 						],
 						"settings":

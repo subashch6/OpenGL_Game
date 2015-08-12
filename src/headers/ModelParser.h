@@ -8,19 +8,24 @@
 #include "GL/glew.h"
 #include <fstream>
 #include "glm/vec3.hpp"
+#include "glm/vec2.hpp"
 #include <vector>
 #include <sstream>
 #include <iostream>
 
 class ModelParser
 {
-	std::vector<glm::vec3> vertices;
 public:
 	ModelParser(std::string );
 	~ModelParser();
 	std::vector<glm::vec3> getVertices();
+
 private:
-	glm::vec3 splitString(std::string , std::string );
+	std::vector<glm::vec3> vertices;
+	std::vector<glm::vec2> textureCoords;
+	std::vector<glm::vec3> vertexNormals;
+	glm::vec3 splitString3(std::string , std::string);
+	glm::vec2 splitString2(std::string, std::string);
 };
 
 #endif  

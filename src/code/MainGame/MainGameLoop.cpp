@@ -39,10 +39,10 @@ int main()
 		return -4;
 	}
 
-	ModelParser parser("../res/box.obj");
+	ModelParser parser("../res/test.obj");
 	Model *model = Loader::createModel(&parser);
 	EntityShader shader("../shaders/TestVert", "../shaders/TestFrag");
-	Camera camera(glm::vec3(1,2,20), glm::vec3(0,0,0), glm::vec3(0,1,0), window);
+	Camera camera(glm::vec3(0,0,20), glm::vec3(0,0,0), glm::vec3(0,1,0), window);
 	Renderer renderer(&shader, &camera);
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
