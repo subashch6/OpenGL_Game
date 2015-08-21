@@ -22,10 +22,11 @@ public:
 
 private:
 	std::vector<glm::vec3> vertices;
+	std::vector<short> indicies;
 	std::vector<glm::vec2> textureCoords;
 	std::vector<glm::vec3> vertexNormals;
-	glm::vec3 splitString3(std::string , std::string);
-	glm::vec2 splitString2(std::string, std::string);
+	std::vector<std::string> splitString(std::string , std::string);
+	void processVertex(std::vector<std::string>, std::vector<glm::vec2>, std::vector<glm::vec3>);
 };
 
 #endif  

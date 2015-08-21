@@ -1,7 +1,7 @@
 #include "Renderer.h"
 
 
-double Renderer::RED = 0.0, Renderer::GREEN = 0.0, Renderer::BLUE = 0.4, Renderer::ALPHA = 1.0;
+double Renderer::RED = 0.0, Renderer::GREEN = 0.0, Renderer::BLUE = 0.0, Renderer::ALPHA = 1.0;
 
 
 
@@ -22,11 +22,10 @@ void Renderer::render(Model *model)
 	shader->loadViewMatrix(Matricies::viewMatrix(*(camera->pos), *(camera->lookAt),*(camera->up)));
 	glBindVertexArray(model->getVao());
 	glEnableVertexAttribArray(0);
-	glDrawArrays(GL_TRIANGLES, 0, model->getSize());
+	//glDrawArrays(GL_TRIANGLES, 0, model->getSize());
 	glDisableVertexAttribArray(0);
 	glBindVertexArray(0);
 	shader->stopProgram();
-	camera->checkChanges();
 }
 
 Renderer::~Renderer()
