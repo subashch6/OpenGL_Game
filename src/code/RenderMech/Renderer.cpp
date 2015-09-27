@@ -9,23 +9,24 @@ Renderer::Renderer(EntityShader *entityShader, Camera *loadCamera)
 {
 	shader = entityShader;
 	camera = loadCamera;
+	glEnable(GL_DEPTH_TEST);
 }
 
 void Renderer::render(Model *model)
 {
-	glEnable(GL_DEPTH_TEST);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	
 	glClearColor((GLclampf)RED, (GLclampf)GREEN, (GLclampf)BLUE, (GLclampf)ALPHA);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	
+	glBindVertexArray(model->vao);
+	glEnableVertexAttribArray(0);
 	shader->startProgram();
 	shader->loadProjectionMatrix(Matricies::projectionMatrix(camera->FOV, camera->aspect, camera->near, camera->far));
 	shader->loadTransformationMatrix(Matricies::transformationMatrix(glm::vec3(0,0,0),0,0,0,glm::vec3(1,1,1)));
-	shader->loadViewMatrix(Matricies::viewMatrix(*(camera->pos), *(camera->lookAt),*(camera->up)));
-	glBindVertexArray(model->getVao());
-	glEnableVertexAttribArray(0);
-	//glDrawArrays(GL_TRIANGLES, 0, model->getSize());
+	shader->loadViewMatrix(Matricies::viewMatrix(*(camera->pos), *(camera->lookAt),*(camera->upVec)));	
+	//glDrawArrays(GL_TRIANGLES, 0, model->size);
+	glDrawElements(GL_TRIANGLES, model->size, GL_UNSIGNED_SHORT, &(model->indicies));
+	shader->stopProgram();
 	glDisableVertexAttribArray(0);
 	glBindVertexArray(0);
-	shader->stopProgram();
 }
 
 Renderer::~Renderer()

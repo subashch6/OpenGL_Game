@@ -3,18 +3,18 @@
 
 
 #include "GL/glew.h"
+#include <vector>
 
 
 class Model
 {
 public:
-	Model(GLuint , double);
+	Model(GLuint , double, std::vector<short>);
 	~Model();
-	GLuint getVao();
-	double getSize();
-private:
+	std::vector<short> indicies;
 	GLuint vao;
 	double size;
+	
 };
 
 #endif

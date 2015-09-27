@@ -73,7 +73,8 @@ GLint AbstractShader::loadShader(const char* vertShaderPath, const char* fragSha
   		fprintf(stderr, "Program Linker issue:%s", infoLog);
   		exit(EXIT_FAILURE);
   	}
-
+	glDeleteShader(vertShader);
+  	glDeleteShader(fragShader);
 	return program;
 
 }

@@ -8,11 +8,7 @@ uniform mat4 transformationMatrix;
 
 void main()
 {
-	vec4 tVector = transformationMatrix * vec4(in_pos,1);
-
-	vec4 tvVector = viewMatrix * tVector;
-
-	vec4 tvpVector = projectionMatrix * tvVector;
+	vec4 tvpVector = projectionMatrix * (viewMatrix * (transformationMatrix * vec4(in_pos, 1)));
 
 	gl_Position = tvpVector;
 }

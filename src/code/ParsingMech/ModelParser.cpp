@@ -64,15 +64,13 @@ ModelParser::ModelParser(std::string str)
 				std::vector<std::string> vec2 = splitString(strings[1], "/");
 				std::vector<std::string> vec3 = splitString(strings[2], "/");
 				processVertex(vec1, textureCoordsHolder, vertexNormalsHolder);
+				processVertex(vec2, textureCoordsHolder, vertexNormalsHolder);
+				processVertex(vec3, textureCoordsHolder, vertexNormalsHolder);
 			}
 		}
 	}
 }
 
-std::vector<glm::vec3> ModelParser::getVertices()
-{
-	return vertices;
-}
 
 std::vector<std::string> ModelParser::splitString(std::string str, std::string character)
 {

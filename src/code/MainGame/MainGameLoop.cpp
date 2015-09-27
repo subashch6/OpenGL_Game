@@ -3,6 +3,15 @@
 const int WIDTH = 800; 
 
 
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
+	{
+		    // When a user presses the escape key, we set the WindowShouldClose property to true, 
+		    // closing the application
+	    	if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+	    		glfwSetWindowShouldClose(window, GL_TRUE);
+	}   
+
+
 
 int main()
 {
@@ -44,6 +53,7 @@ int main()
 	EntityShader shader("../shaders/TestVert", "../shaders/TestFrag");
 	Camera camera(glm::vec3(0,0,20), glm::vec3(0,0,0), glm::vec3(0,1,0), window);
 	Renderer renderer(&shader, &camera);
+	glfwSetKeyCallback(window, key_callback); 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
@@ -55,9 +65,10 @@ int main()
         /* Poll for and process events */
         glfwPollEvents();
         camera.checkChanges();
+        //fprintf(stdout, "%f\t%f\t%f\n", camera.pos->x, camera.pos->y, camera.pos->z);
     }
-    glfwTerminate();
     delete model;
-    return 0;
+    fprintf(stdout, "HI\n");
+    glfwTerminate();
+    exit(EXIT_SUCCESS);
 }
-

@@ -1,10 +1,10 @@
 #include "Camera.h"
 
-Camera::Camera(glm::vec3 eye, glm::vec3 lookat, glm::vec3 upVec, GLFWwindow* wind)
+Camera::Camera(glm::vec3 eye, glm::vec3 lookat, glm::vec3 upVector, GLFWwindow* wind)
 {
 	pos = &eye;
 	lookAt = &lookat;
-	up = &upVec;
+	upVec = &upVector;
 	window = wind;
 }	
 
@@ -79,27 +79,27 @@ void Camera::camChanges(bool in, bool out, bool up, bool down, bool right, bool 
 {
 	if(in)
 	{
-		pos[2] -= .1f;
+		pos->z -= .1f;
 	}
 	else if(out)
 	{
-		pos[2] += .1f;
+		pos->z+= .1f;
 	}
 	if(up)
 	{
-		pos[1] += .1f;
+		lookAt->y += .1f;
 	}
 	else if(down)
 	{
-		pos[1] -= .1f;
+		lookAt->y -= .1f;
 	}
 	if(right)
 	{
-		pos[0] += .1f;
+		lookAt->x += .1f;
 	}
 	else if(left)
 	{
-		pos[0] -= .1f;
+		lookAt->x -= .1f;
 	}
 
 }
