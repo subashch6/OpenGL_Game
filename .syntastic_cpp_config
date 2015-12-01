@@ -1,0 +1,7 @@
+
+
+
+
+-I includes
+-I src/headers
+-std=gnu++11
