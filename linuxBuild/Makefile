@@ -6,7 +6,7 @@ DYNLIBS = ../linuxDynamic/libGLEW.so
 
 LIBPATHS = 
 
-STATLIBS = -lglfw3 -pthread -lGLEW -lGLU -lGL -lrt -lXrandr -lXxf86vm -lXi -lXinerama -lX11 -lXcursor
+STATLIBS = -pthread -lGLEW -lGLU -lGL -lrt -lXrandr -lXxf86vm -lXi -lXinerama -lX11 -lXcursor -lglfw
 
 CFLAGS = -c 
 

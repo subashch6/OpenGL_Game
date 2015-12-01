@@ -9,9 +9,9 @@
 class Model
 {
 public:
-	Model(GLuint , double, std::vector<short>);
+	Model(GLuint , double, std::vector<int>);
 	~Model();
-	std::vector<short> indicies;
+	std::vector<int> indicies;
 	GLuint vao;
 	double size;
 	

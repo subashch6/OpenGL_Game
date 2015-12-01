@@ -1,6 +1,6 @@
 #include "Model.h"
 
-Model::Model(GLuint Vao, double sizes, std::vector<short> indexVector)
+Model::Model(GLuint Vao, double sizes, std::vector<int> indexVector)
 {
 	vao = Vao;
 	size = sizes;

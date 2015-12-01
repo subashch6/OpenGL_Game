@@ -1,14 +1,13 @@
-#version 420 core
+#version 130
 
-layout(location = 0) in vec3 in_pos;
-
+in vec3 in_pos;
 uniform mat4 viewMatrix;
 uniform mat4 projectionMatrix;
 uniform mat4 transformationMatrix;
 
 void main()
 {
-	vec4 tvpVector = projectionMatrix * (viewMatrix * (transformationMatrix * vec4(in_pos, 1)));
+    vec4 tvpVector = projectionMatrix * (viewMatrix * (transformationMatrix * vec4(in_pos, 1)));
 
 	gl_Position = tvpVector;
 }

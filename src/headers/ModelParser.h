@@ -16,10 +16,10 @@
 class ModelParser
 {
 public:
-	ModelParser(std::string );
+	ModelParser(std::string);
 	~ModelParser();
 	std::vector<glm::vec3> vertices;
-	std::vector<short> indicies;
+	std::vector<int> indicies;
 	std::vector<glm::vec2> textureCoords;
 	std::vector<glm::vec3> vertexNormals;
 
@@ -28,7 +28,7 @@ private:
 	
 	std::vector<std::string> splitString(std::string , std::string);
 	void processVertex(std::vector<std::string>, std::vector<glm::vec2>, std::vector<glm::vec3>);
+    void setup(std::string);
 };
-
 #endif  
 
