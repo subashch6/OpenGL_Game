@@ -11,7 +11,7 @@ public:
 	glm::vec3 *pos;
 	glm::vec3 *lookAt;
 	glm::vec3 *upVec;
-	float FOV = 45.0f;
+	float FOV = 70.0f;
 	float aspect = 4.0f/3.0f;
 	float near = 0.1f;
 	float far = 100.0f;

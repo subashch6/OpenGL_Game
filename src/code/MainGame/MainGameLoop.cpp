@@ -26,6 +26,7 @@ int main()
         modelPath = "../res/dragon.obj";   
     
     }
+    
     GLFWwindow* window;
 
     /* Initialize the library */
@@ -57,23 +58,17 @@ int main()
         glfwTerminate();
         return -4;
     }
-    
-    float vecs[] = {-1.0f, -1.0f, 0.0,
-                    1.0f,-1.0f, 0.0f,
-                    0.0f, 1.0f, 0.0f};
-   
-    ModelParser parser(modelPath);
-    printf("%d",parser.vertices.size());
-    Model *model = Loader::createModel(&parser);
+    ModelParser modelParser;
+    Model model = modelParser.createModel(modelPath);
     EntityShader shader("../shaders/TestVert", "../shaders/TestFrag");
-    Camera camera(glm::vec3(0,0,10), glm::vec3(0,0,0), glm::vec3(0,1,0), window);
+    Camera camera(glm::vec3(0,0,20), glm::vec3(0,0,0), glm::vec3(0,1,0), window);
     Renderer renderer(&shader, &camera);
     glfwSetKeyCallback(window, key_callback); 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
-        renderer.render(model);
+        renderer.render(&model);
         
         /* Swap front and back buffers */
         glfwSwapBuffers(window);    
@@ -82,7 +77,6 @@ int main()
         glfwPollEvents();
         camera.checkChanges();
     }
-    delete model;
     glfwTerminate();
     exit(EXIT_SUCCESS);
 }

@@ -2,7 +2,7 @@
 #ifndef _MODELPARSER_H
 #define _MODELPARSER_H
 
-
+#include "Model.h"
 #include <string.h>
 #include <string>
 #include "GL/glew.h"
@@ -13,22 +13,14 @@
 #include <sstream>
 #include <iostream>
 
+class Model;
+
 class ModelParser
 {
 public:
-	ModelParser(std::string);
+	ModelParser();
 	~ModelParser();
-	std::vector<glm::vec3> vertices;
-	std::vector<int> indicies;
-	std::vector<glm::vec2> textureCoords;
-	std::vector<glm::vec3> vertexNormals;
-
-private:
-	
-	
-	std::vector<std::string> splitString(std::string , std::string);
-	void processVertex(std::vector<std::string>, std::vector<glm::vec2>, std::vector<glm::vec3>);
-    void setup(std::string);
+    static Model createModel(std::string);
 };
 #endif  
 
