@@ -26,7 +26,7 @@ Model ModelParser::createModel(std::string path)
     std::vector <glm::vec3> temp_norms;
     while(true)
     {
-        char lineHead[128];
+        char lineHead[200];
         int res = fscanf(file, "%s", lineHead);
         if(res == EOF)
         {

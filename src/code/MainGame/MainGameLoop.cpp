@@ -1,5 +1,6 @@
 #include "MainGameLoop.h"
 
+
 const int WIDTH = 800; 
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
@@ -12,7 +13,6 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 int main()
 {
-
     std::string input;
     printf("what is your model of choosing? ");
     std::getline(std::cin, input);
