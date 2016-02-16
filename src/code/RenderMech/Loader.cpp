@@ -15,7 +15,6 @@ GLuint Loader::makeModel(std::vector<glm::vec3> * vertices)
        verts[3*i+1] = vertices->at(i).y;
        verts[3*i+2] = vertices->at(i).z;
     }
-  printf("verticesSize = %zu\n", vertices->size());
 	GLuint vaoID;
 	glGenVertexArrays(1, &vaoID);
 	glBindVertexArray(vaoID);

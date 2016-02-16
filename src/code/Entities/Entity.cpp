@@ -1,12 +1,13 @@
 #include "Entity.h"
 
-Entity::Entity(glm::vec3 positionVector, float rotationx, float rotationy, float rotationz, float entitydialtion)
+Entity::Entity(Model* thisModel, glm::vec3 positionVector, float rotationx, float rotationy, float rotationz, glm::vec3 entityDialation)
 {
+    model = thisModel;
 	position = positionVector;
 	rotx = rotationx;
 	roty = rotationy;
 	rotz = rotationz;
-	scale = entitydialtion;
+	scale = entityDialation;
 }
 
 Entity::~Entity()
@@ -34,7 +35,16 @@ float Entity::getRotationZ()
 {
 	return rotz;
 }
-float Entity::getScale()
+glm::vec3 Entity::getScale()
 {
 	return scale;
+}
+glm::mat4x4 Entity::getTransform()
+{
+    return Matricies::transformationMatrix(position,rotx,roty,rotz,scale);
+}
+
+Model* Entity::getModel()
+{   
+    return model;
 }

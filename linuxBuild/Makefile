@@ -10,11 +10,11 @@ STATLIBS = -pthread -lGLEW -lGLU -lGL -lrt -lXrandr -lXxf86vm -lXi -lXinerama -l
 
 CFLAGS = -c 
 
-APPFLAGS = -std=gnu++11
+APPFLAGS = -std=gnu++11  -fopenmp
 
 RM = rm
 
-VPATH = ../src/code/Entities:../src/code/Loading:../src/code/MainGame:../src/code/Math:../src/code/ParsingMech:../src/code/RenderMech:../src/code/ShaderMech:../src/code/Camera:../src/code/Models
+VPATH = ../src/code/Entities:../src/code/MainGame:../src/code/Utilities:../src/code/ParsingMech:../src/code/RenderMech:../src/code/ShaderMech:../src/code/Models
 
 DIRECTORIES = $(wildcard ../src/code/*/*.cpp)
 

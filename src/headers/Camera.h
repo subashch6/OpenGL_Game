@@ -4,6 +4,8 @@
 #include <glm/mat4x4.hpp>
 #include <glm/vec3.hpp>
 #include "GLFW/glfw3.h"
+#include <iostream>
+
 
 class Camera
 {
@@ -18,7 +20,6 @@ public:
 	GLFWwindow * window;
 	Camera(glm::vec3, glm::vec3, glm::vec3, GLFWwindow*);
 	void checkChanges();
-	void camChanges(bool,bool,bool,bool,bool,bool);
 };
 
 #endif

@@ -10,11 +10,11 @@ STATLIBS = -lopengl32
 
 CFLAGS = -c 
 
-APPFLAGS = -std=gnu++11
+APPFLAGS = -std=gnu++11 -openmp
 
 RM = rm
 
-VPATH = ../src/code/Entities:../src/code/Loading:../src/code/MainGame:../src/code/Math:../src/code/ParsingMech:../src/code/RenderMech:../src/code/ShaderMech:../src/code/Camera:../src/code/Models
+VPATH = ../src/code/Entities:../src/code/MainGame:../src/code/Utilities:../src/code/ParsingMech:../src/code/RenderMech:../src/code/ShaderMech:../src/code/Models
 
 DIRECTORIES = $(wildcard ../src/code/*/*.cpp)
 
