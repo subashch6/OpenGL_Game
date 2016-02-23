@@ -12,6 +12,7 @@
 #include <vector>
 #include <sstream>
 #include <iostream>
+#include <stdlib.h>
 
 class Model;
 
