@@ -4,11 +4,9 @@ in vec3 in_pos;
 uniform mat4 viewMatrix;
 uniform mat4 projectionMatrix;
 uniform mat4 transformationMatrix;
-out vec3 color;
 
 void main()
 {
     vec4 tvpVector = projectionMatrix * (viewMatrix * (transformationMatrix * vec4(in_pos, 1.0)));
-    color = vec3(in_pos.x + 0.5, 1.0, in_pos.y + 0.5);
 	gl_Position = tvpVector;
 } 

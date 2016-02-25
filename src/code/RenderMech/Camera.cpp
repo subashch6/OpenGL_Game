@@ -53,6 +53,5 @@ void Camera::checkChanges()
 	{
 		lookAt->x -= .1f;
 	}
-    printf("%f %f %f\n",pos->x, pos->y, pos->z);
 
 }

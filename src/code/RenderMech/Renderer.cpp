@@ -9,8 +9,8 @@ Renderer::Renderer(EntityShader *entityShader, Camera *loadCamera)
 {
 	shader = entityShader;
 	camera = loadCamera;
-	glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
+	//glEnable(GL_DEPTH_TEST);
+    //glEnable(GL_CULL_FACE);
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     loadProjection(entityShader, loadCamera);
 }
@@ -20,7 +20,8 @@ void Renderer::render(Entity* entity)
 	glBindVertexArray(entity->getModel()->vao);
 	glEnableVertexAttribArray(0);
     shader->loadTransformationMatrix(entity->getTransform());
-    glDrawElements(GL_TRIANGLES, entity->getModel()->size, GL_UNSIGNED_INT, &entity->getModel()->indicies[0]); 
+    glDrawArrays(GL_TRIANGLES, 0, entity->getModel()->size);
+    //glDrawElements(GL_TRIANGLES, entity->getModel()->size, GL_UNSIGNED_INT, &entity->getModel()->indicies[0]); 
 	glDisableVertexAttribArray(0);
 	glBindVertexArray(0);
 }
