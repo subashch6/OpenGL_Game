@@ -10,7 +10,7 @@ STATLIBS = -lopengl32
 
 CFLAGS = -c 
 
-APPFLAGS = -std=gnu++11 -openmp
+APPFLAGS = -std=gnu++11 -fopenmp
 
 RM = rm
 
