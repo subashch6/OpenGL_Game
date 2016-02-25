@@ -18,9 +18,9 @@ void Camera::checkChanges()
         double bx = (lookAt->y - pos->y);
         double cx = (lookAt->z - pos->z);
         double length = (ax*ax)+(bx*bx)+(cx*cx);
-        pos->x += (ax * 5)/(length);
-        pos->y += (bx * 5)/(length);
-        pos->z += (cx * 5)/(length);
+        pos->x += (ax)/(length);
+        pos->y += (bx)/(length);
+        pos->z += (cx)/(length);
 	}
 	state = glfwGetKey(window, GLFW_KEY_Q);
 	if(state == GLFW_PRESS)
@@ -29,9 +29,9 @@ void Camera::checkChanges()
        double bx = (lookAt->y - pos->y);
        double cx = (lookAt->z - pos->z);
        double length = (ax*ax)+(bx*bx)+(cx*cx);
-       pos->x -= (ax * 5)/(length);
-       pos->y -= (bx * 5)/(length);
-       pos->z -= (cx * 5)/(length);
+       pos->x -= (ax)/(length);
+       pos->y -= (bx)/(length);
+       pos->z -= (cx)/(length);
    	}
 	state = glfwGetKey(window, GLFW_KEY_W);
 	if(state == GLFW_PRESS)

@@ -12,7 +12,7 @@ private:
 public:
 	Loader();
 	~Loader();
-	static GLuint makeModel(std::vector<glm::vec3> *);
+	static std::vector<GLuint> makeModel(std::vector<glm::vec3> *);
 };
 
 #endif 

@@ -14,7 +14,8 @@ public:
 	Model(std::vector<glm::vec3> , std::vector<glm::vec2>, std::vector<int> , std::vector<glm::vec3> );
 	~Model();
     std::vector<int> indicies;
-	GLuint vao;
+    GLuint vao;
+    GLuint vbos[1];
 	int size;	
 };
 
