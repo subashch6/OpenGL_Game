@@ -17,11 +17,11 @@ Renderer::Renderer(EntityShader *entityShader, Camera *loadCamera)
 
 void Renderer::render(Entity* entity)
 {
+
 	glBindVertexArray(entity->getModel()->vao);
 	glEnableVertexAttribArray(0);
     shader->loadTransformationMatrix(entity->getTransform());
-    glDrawArrays(GL_TRIANGLES, 0, entity->getModel()->size);
-    //glDrawElements(GL_TRIANGLES, entity->getModel()->size, GL_UNSIGNED_INT, &entity->getModel()->indicies[0]); 
+    glDrawElements(GL_TRIANGLES, entity->getModel()->size, GL_UNSIGNED_INT, &entity->getModel()->indicies[0]); 
 	glDisableVertexAttribArray(0);
 	glBindVertexArray(0);
 }
